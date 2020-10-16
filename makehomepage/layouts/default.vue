@@ -1,43 +1,43 @@
 <template>
-    <v-app>
-      <v-app-bar dark>
-        <v-app-bar-nav-icon @click="drawer=true"></v-app-bar-nav-icon>
-        <v-toolbar-title @click="back_home">
-          プログラミングサークルPablo
-        </v-toolbar-title>
-        <v-tabs icons-and-text>
-          <v-tabs-slider></v-tabs-slider>
-          <v-tab v-for="(item,index) in menu" :key="index" :href="item.url" >
-            {{ item.name }}
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-tab>
-        </v-tabs>
-      </v-app-bar>
-      <v-navigation-drawer v-model="drawer" fixed temporary >
-        <v-list rounded>
+  <v-app>
+    <v-app-bar dense>
+      <v-app-bar-nav-icon @click="drawer=true" />
+      <v-toolbar-title @click="back_home">
+        プログラミングサークルPablo
+      </v-toolbar-title>
+      <v-tabs icons-and-text>
+        <v-tabs-slider />
+        <v-tab v-for="(item,index) in menu" :key="index" :href="item.url">
+          {{ item.name }}
+        </v-tab>
+      </v-tabs>
+    </v-app-bar>
+    <v-navigation-drawer v-model="drawer" fixed temporary>
+      <v-list rounded>
         <v-list-group>
           <v-list-item v-for="(item, index) in menu" :key="index" :href="item.url">
-            <v-list-title v-text="item.name"></v-list-title>
+            <v-list-title v-text="item.name" />
           </v-list-item>
         </v-list-group>
-        </v-list>
-      </v-navigation-drawer>
-      <v-container fluid>
-        <nuxt/>
-      </v-container>
-       <footer>
-         <v-tabs
-         fixed-tabs
-         background-color="indigo"
-         dark>
-          <v-tabs-slider></v-tabs-slider>
-          <v-tab v-for="(item,index) in menu" :key="index" :href="item.url" >
-            {{ item.name }}
-          </v-tab>
-        </v-tabs>
-        &copy; 2020 pablo
+      </v-list>
+    </v-navigation-drawer>
+    <v-container fluid>
+      <nuxt />
+    </v-container>
+    <footer>
+      <v-tabs
+        fixed-tabs
+        background-color="indigo"
+        dark
+      >
+        <v-tabs-slider />
+        <v-tab v-for="(item,index) in menu" :key="index" :href="item.url">
+          {{ item.name }}
+        </v-tab>
+      </v-tabs>
+      &copy; 2020 pablo
     </footer>
-      </v-app>
+  </v-app>
 </template>
 
 <script>
