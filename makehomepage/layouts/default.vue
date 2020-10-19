@@ -1,41 +1,88 @@
 <template>
   <v-app>
-    <v-app-bar dense>
-      <v-app-bar-nav-icon @click="drawer=true" />
-      <v-toolbar-title @click="back_home">
-        プログラミングサークルPablo
-      </v-toolbar-title>
-      <v-tabs icons-and-text>
-        <v-tabs-slider />
-        <v-tab v-for="(item,index) in menu" :key="index" :href="item.url">
-          {{ item.name }}
-        </v-tab>
-      </v-tabs>
-    </v-app-bar>
-    <v-navigation-drawer v-model="drawer" fixed temporary>
-      <v-list rounded>
-        <v-list-group>
-          <v-list-item v-for="(item, index) in menu" :key="index" :href="item.url">
-            <v-list-title v-text="item.name" />
-          </v-list-item>
-        </v-list-group>
-      </v-list>
-    </v-navigation-drawer>
-    <v-container fluid>
-      <nuxt />
+    <v-container
+      class="hero"
+      fluid
+    >
+      <v-row>
+        <v-app-bar-nav-icon
+          class="navicon"
+          color="primary"
+          background-color="transparent"
+          @click.stop="drawer = !drawer"
+        />
+        <v-navigation-drawer
+          v-model="drawer"
+          absolute
+          temporary
+        >
+          <v-list
+            nav
+            dense
+          >
+            <v-list-item-group>
+              <v-list-item v-for="(item, index) in menu" :key="index" :href="item.url">
+                <v-list-item-title>{{ item.name }}</v-list-item-title>
+              </v-list-item>
+            </v-list-item-group>
+          </v-list>
+        </v-navigation-drawer>
+        <v-col
+          cols="6"
+        >
+          <a href="/" class="icon__anchor">
+            <h1 class="icon">Pablo</h1>
+          </a>
+        </v-col>
+        <v-col
+          cols="6"
+        >
+          <v-tabs
+            class="tabs"
+            background-color="transparent"
+          >
+            <v-tabs-slider />
+            <v-tab v-for="(item,index) in menu" :key="index" :href="item.url">
+              <p class="tabs__item">
+                {{ item.name }}
+              </p>
+            </v-tab>
+          </v-tabs>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col
+          align-self="center"
+        >
+          <div>
+            <h1 class="hero__title">
+              Pablo
+            </h1>
+            <p class="hero__text">
+              協調を通じて成長する場所
+            </p>
+          </div>
+        </v-col>
+      </v-row>
     </v-container>
+    <nuxt />
     <footer>
       <v-tabs
         fixed-tabs
-        background-color="indigo"
-        dark
+        background-color="#FBC02D"
+        class="footer__tabs"
       >
         <v-tabs-slider />
-        <v-tab v-for="(item,index) in menu" :key="index" :href="item.url">
+        <v-tab v-for="(item,index) in menu" :key="index" :href="item.url" class="tabs__item">
           {{ item.name }}
         </v-tab>
+        <p class="footer__copy">
+          &copy; 2020 pablo
+        </p>
       </v-tabs>
-      &copy; 2020 pablo
+      <p class="footer__copy2">
+        &copy; 2020 pablo
+      </p>
     </footer>
   </v-app>
 </template>
@@ -43,7 +90,7 @@
 <script>
 const menuitem = [
   {
-    name: 'HOME',
+    name: 'ホーム',
     url: '/',
     icon: 'mdi-heart'
   },
@@ -55,16 +102,6 @@ const menuitem = [
   {
     name: '成果物',
     url: '/results/',
-    icon: 'mdi-heart'
-  },
-  {
-    name: '年間予定',
-    url: '/schedule/',
-    icon: 'mdi-heart'
-  },
-  {
-    name: 'サークル概要',
-    url: '/detail/',
     icon: 'mdi-heart'
   },
   {
@@ -89,9 +126,94 @@ export default {
 
 </script>
 <style scoped>
-.v-toolbar__title{
-  overflow: visible;
-  margin: 20px;
+.icon__anchor {
+  text-decoration:none;
+}
+@media screen and (max-width: 400px){
+  .icon__anchor {
+    display: none;
+  }
+}
+.icon {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 50px;
+  color: #FBC02D;
+}
+@media screen and (max-width: 400px){
+  .icon {
+  width: 130px;
+  height: 60px;
+  margin: 0px 0px 0px 180px;
+  }
+}
+@media screen and (min-width: 400px){
+  .navicon {
+    display: none;
+  }
+}
+.tabs {
+  margin: 0px 250px;
+}
+@media screen and (max-width: 400px) {
+  .tabs {
+    display: none;
+  }
+}
+.tabs__item {
+  color: aliceblue;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+}
+.hero {
+  background-image: url('/3888153_s.jpg');
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+}
+.hero__title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 40vh;
+  margin: 60px 5px 0px 600px ;
+  height: 50vh;
+  color: #FBC02D;
+}
+.hero__text {
+  color:white;
+  font-size: 40px;
+  margin: 0px 0px 30px 600px;
+}
+@media screen and (max-width: 400px){
+  .hero__title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15vh;
+    margin: 200px 5px 0px 0px ;
+    height: 25vh;
+    color: #FBC02D;
+}
+.hero__text {
+  color:white;
+  font-size: 20px;
+  margin: 0px 0px 300px 0px;
+}
+}
+@media screen and (max-width: 400px){
+  .footer__tabs{
+    display: none;
+  }
+}
+.footer__copy{
+  margin-top: 20px;
+  color: white;
 
+}
+.footer__copy2 {
+  color: #FBC02D;
+}
+@media screen and (min-width: 400px){
+  .footer__copy2{
+    display: none;
+  }
 }
 </style>
