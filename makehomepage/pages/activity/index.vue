@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  layout: 'lactivity'
 }
 </script>
 <style scoped>

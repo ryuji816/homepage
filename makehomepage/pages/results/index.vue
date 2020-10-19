@@ -9,5 +9,6 @@
 </template>
 <script>
 export default {
+  layout: 'rlayout'
 }
 </script>
