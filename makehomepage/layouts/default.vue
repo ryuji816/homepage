@@ -45,6 +45,7 @@
             right
             background-color="transparent"
           >
+            <v-tabs-slider color="transparent" />
             <v-tab v-for="(item,index) in menu" :key="index" :href="item.url">
               <p class="tabs__item">
                 {{ item.name }}
@@ -75,15 +76,17 @@
         background-color="#FBC02D"
         class="footer__tabs"
       >
-        <v-tabs-slider />
-        <v-tab v-for="(item,index) in menu" :key="index" :href="item.url" class="tabs__item">
-          {{ item.name }}
+        <v-tabs-slider color="transparent" />
+        <v-tab v-for="(item,index) in menu" :key="index" :href="item.url" class="tabs__item__footer">
+          <p class="tabs__item">
+            {{ item.name }}
+          </p>
         </v-tab>
-        <p class="footer__copy">
+        <p class="footer__copy mr-4">
           &copy; 2020 pablo
         </p>
       </v-tabs>
-      <p class="footer__copy2">
+      <p class="footer__copy2 mr-4">
         &copy; 2020 pablo
       </p>
     </footer>
@@ -122,9 +125,6 @@ export default {
     }
   },
   methods: {
-    back_home () {
-      this.$router.push('/')
-    }
   }
 }
 
@@ -159,6 +159,12 @@ export default {
   .tabs {
     display: none;
   }
+}
+.tabs__item__footer {
+  color: brown;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
 }
 .tabs__item {
   color: aliceblue;
