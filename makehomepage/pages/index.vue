@@ -209,57 +209,9 @@
 const news = [
   {
     title: 'ホームページ公開！！',
-    content: 'ホームページを作成しました',
-    date: '2020/10/19',
-    genre: '新着状況'
-  },
-  {
-    title: '競技プログラミング参戦!!',
-    content: 'code forceに参加しました',
+    content: 'ホームページを作成し、公開しました。',
     date: '2020/10/20',
     genre: '新着状況'
-  },
-  {
-    title: '新しい本の購入!!',
-    content: '新しく５冊の本を購入しました',
-    date: '2020/10/21',
-    genre: '書籍'
-  },
-  {
-    title: '秋新歓の予定決定!!',
-    content: '秋新歓に出すコンテンツについて決まりました',
-    date: '2020/10/22',
-    genre: '新歓'
-  },
-  {
-    title: 'お菓子購入!',
-    content: '新たにチョコを購入しました',
-    date: '2020/10/23',
-    genre: 'お菓子'
-  },
-  {
-    title: 'News3',
-    content: 'Wikiの作成が順調です',
-    date: '2020/10/24',
-    genre: '新歓'
-  },
-  {
-    title: 'News1',
-    content: 'ホームページを作成しました',
-    date: '2020/10/25',
-    genre: '新着状況'
-  },
-  {
-    title: 'News2',
-    content: 'code forceに参加しました',
-    date: '2020/10/26',
-    genre: 'リリース'
-  },
-  {
-    title: 'News3',
-    content: 'Wikiの作成が順調です',
-    date: '2020/10/27',
-    genre: '新歓'
   }
 ]
 const cyima = [

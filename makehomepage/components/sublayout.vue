@@ -45,7 +45,7 @@
             right
             background-color="transparent"
           >
-            <v-tabs-slider />
+            <v-tabs-slider color="transparent" />
             <v-tab v-for="(item,index) in menu" :key="index" :href="item.url">
               <p class="tabs__item">
                 {{ item.name }}
@@ -75,9 +75,11 @@
         background-color="#FBC02D"
         class="footer__tabs"
       >
-        <v-tabs-slider />
+        <v-tabs-slider color="transparent" />
         <v-tab v-for="(item,index) in menu" :key="index" :href="item.url" class="tabs__item">
-          {{ item.name }}
+          <p class="tabs__item">
+            {{ item.name }}
+          </p>
         </v-tab>
         <p class="footer__copy">
           &copy; 2020 pablo
