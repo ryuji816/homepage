@@ -7,6 +7,7 @@
 import Sublayout from '@/components/sublayout'
 
 export default {
+  name: 'Rlayout',
   components:
   Sublayout
 

@@ -1,14 +1,13 @@
 <template>
   <v-app>
-    <div>
-      <h1>これはactivityのページです</h1>
-    </div>
+    <h1>制作中です。</h1>
   </v-app>
 </template>
 
 <script>
 export default {
-  layout: 'lactivity'
+  name: 'Inquiry',
+  layout: 'ilayout'
 }
 </script>
 <style scoped>

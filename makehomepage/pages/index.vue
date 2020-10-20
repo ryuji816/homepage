@@ -72,6 +72,8 @@
     <section class="overview">
       <v-container
         fill-height
+        pt-16
+        pb-16
       >
         <v-row>
           <v-col
@@ -109,6 +111,8 @@
       <v-container
         class="activitie"
         fill-height
+        pt-16
+        pb-16
       >
         <v-row>
           <v-col
@@ -155,6 +159,8 @@
     <section class="result">
       <v-container
         fill-height
+        pt-16
+        pb-16
       >
         <v-row>
           <v-col
@@ -272,6 +278,7 @@ const cyima = [
 ]
 
 export default {
+  name: 'Top',
   data () {
     return {
       slides: cyima,
@@ -321,7 +328,6 @@ export default {
   background-size: cover;
   background-position: center center;
   width: 100%;
-  height: 70vh;
 }
 .overview__title {
   font-family: 'Courier New', Courier, monospace;
@@ -347,7 +353,6 @@ export default {
   background-size: cover;
   background-position: center center;
   width: 100%;
-  height: 70vh;
 }
 .activity__title {
   font-family: 'Courier New', Courier, monospace;
@@ -373,7 +378,6 @@ export default {
   background-size: cover;
   background-position: center center;
   width: 100%;
-  height: 70vh;
 }
 .result__title {
   font-family: 'Courier New', Courier, monospace;

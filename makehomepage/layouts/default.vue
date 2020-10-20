@@ -28,20 +28,23 @@
           </v-list>
         </v-navigation-drawer>
         <v-col
-          cols="6"
+          sm="3"
+          md="2"
         >
           <a href="/" class="icon__anchor">
             <h1 class="icon">Pablo</h1>
           </a>
         </v-col>
         <v-col
-          cols="6"
+          class="ml-auto"
+          sm="9"
+          offset-sm="0"
         >
           <v-tabs
             class="tabs"
+            right
             background-color="transparent"
           >
-            <v-tabs-slider />
             <v-tab v-for="(item,index) in menu" :key="index" :href="item.url">
               <p class="tabs__item">
                 {{ item.name }}
@@ -52,16 +55,16 @@
       </v-row>
       <v-row>
         <v-col
-          align-self="center"
+          sm="10"
+          offset-md="6"
+          md="9"
         >
-          <div>
-            <h1 class="hero__title">
-              Pablo
-            </h1>
-            <p class="hero__text">
-              協調を通じて成長する場所
-            </p>
-          </div>
+          <h1 class="hero__title">
+            Pablo
+          </h1>
+          <p class="hero__text">
+            協調を通じて成長する場所
+          </p>
         </v-col>
       </v-row>
     </v-container>
@@ -111,6 +114,7 @@ const menuitem = [
   }
 ]
 export default {
+  name: 'TopLayout',
   data () {
     return {
       menu: menuitem,
@@ -151,9 +155,6 @@ export default {
     display: none;
   }
 }
-.tabs {
-  margin: 0px 250px;
-}
 @media screen and (max-width: 400px) {
   .tabs {
     display: none;
@@ -174,15 +175,12 @@ export default {
 }
 .hero__title {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 40vh;
-  margin: 60px 5px 0px 600px ;
-  height: 50vh;
+  font-size: 20vw;
   color: #FBC02D;
 }
 .hero__text {
   color:white;
-  font-size: 40px;
-  margin: 0px 0px 30px 600px;
+  font-size: 4vw;
 }
 @media screen and (max-width: 400px){
   .hero__title {
