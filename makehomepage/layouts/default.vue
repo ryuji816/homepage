@@ -64,7 +64,7 @@
             Pablo
           </h1>
           <p class="hero__text">
-            協調を通じて成長する場所
+            神戸大学プログラミングサークル
           </p>
         </v-col>
       </v-row>
