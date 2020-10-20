@@ -28,17 +28,21 @@
           </v-list>
         </v-navigation-drawer>
         <v-col
-          cols="6"
+          sm="3"
+          md="2"
         >
           <a href="/" class="icon__anchor">
             <h1 class="icon">Pablo</h1>
           </a>
         </v-col>
         <v-col
-          cols="6"
+          class="ml-auto"
+          sm="9"
+          offset-sm="0"
         >
           <v-tabs
             class="tabs"
+            right
             background-color="transparent"
           >
             <v-tabs-slider />
@@ -51,7 +55,11 @@
         </v-col>
       </v-row>
       <v-row>
-        <v-col>
+        <v-col
+          sm="10"
+          offset-md="6"
+          md="9"
+        >
           <div>
             <h1 class="hero__title">
               {{ title }}
@@ -106,6 +114,7 @@ const menuitem = [
   }
 ]
 export default {
+  name: 'Slayout',
   props: {
     // eslint-disable-next-line vue/require-default-prop
     title: String
@@ -150,9 +159,6 @@ export default {
   margin: 0px 0px 0px 180px;
   }
 }
-.tabs {
-  margin: 0px 250px;
-}
 @media screen and (max-width: 400px) {
   .tabs {
     display: none;
@@ -173,15 +179,12 @@ export default {
 }
 .hero__title {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 10vh;
-  height: 50vh;
+  font-size: 7vw;
   color: white;
-  margin: 30px 0px 0px 800px;
 }
 .hero__text {
   color:white;
-  font-size: 40px;
-  margin: 0px 0px 30px 600px;
+  font-size: 4vw;
 }
 @media screen and (max-width: 400px){
   .hero {
