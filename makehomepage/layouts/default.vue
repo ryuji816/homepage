@@ -131,7 +131,7 @@ export default {
 .icon__anchor {
   text-decoration:none;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 420px){
   .icon__anchor {
     display: none;
   }
@@ -141,19 +141,19 @@ export default {
   font-size: 50px;
   color: #FBC02D;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 420px){
   .icon {
   width: 130px;
   height: 60px;
   margin: 0px 0px 0px 180px;
   }
 }
-@media screen and (min-width: 400px){
+@media screen and (min-width: 420px){
   .navicon {
     display: none;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .tabs {
     display: none;
   }
@@ -184,9 +184,9 @@ export default {
 }
 .hero__text {
   color:white;
-  font-size: 4vw;
+  font-size: 3vw;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 420px){
   .hero__title {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 15vh;
@@ -200,7 +200,7 @@ export default {
   margin: 0px 0px 300px 0px;
 }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 420px){
   .footer__tabs{
     display: none;
   }
@@ -213,7 +213,7 @@ export default {
 .footer__copy2 {
   color: #FBC02D;
 }
-@media screen and (min-width: 400px){
+@media screen and (min-width: 420px){
   .footer__copy2{
     display: none;
   }

@@ -249,7 +249,7 @@ export default {
 .recipient {
   margin: 13px 20px;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 420px){
   .carousel {
     height: 200px;
   }
@@ -291,13 +291,13 @@ export default {
   font-family: 'Times New Roman', Times, serif;
   line-height: 40px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .overview {
   background-color: whitesmoke;
   background-size: cover;
   background-position: center center;
   width: 100%;
-  height: 100vh;
+  height: 830px;
 }
 }
 .activitie {
@@ -316,13 +316,13 @@ export default {
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .activitie {
   background-color: white;
   background-size: cover;
   background-position: center center;
   width: 100%;
-  height: 100vh;
+  height: 830px;
 }
 }
 .result {
@@ -342,13 +342,13 @@ export default {
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 420px){
   .result {
   background-color:whitesmoke;
   background-size: cover;
   background-position: center center;
   width: 100%;
-  height: 100vh;
+  height: 830px;
 }
 }
 </style>

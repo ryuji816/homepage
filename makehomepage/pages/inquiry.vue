@@ -111,7 +111,7 @@ export default {
 </script>
 <style scoped>
 .inquiry-top {
-  height: 180vh;
+  height: 1500px;
   background-color: whitesmoke;
 }
 
