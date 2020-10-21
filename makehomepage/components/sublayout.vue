@@ -126,11 +126,6 @@ export default {
       menu: menuitem,
       drawer: false
     }
-  },
-  methods: {
-    back_home () {
-      this.$router.push('/')
-    }
   }
 }
 

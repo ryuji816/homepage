@@ -123,8 +123,6 @@ export default {
       menu: menuitem,
       drawer: false
     }
-  },
-  methods: {
   }
 }
 
