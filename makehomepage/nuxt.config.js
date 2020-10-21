@@ -9,7 +9,7 @@ export default {
 
   // https://ja.nuxtjs.org/faq/github-pages/
   router: {
-    base: '/'
+    base: '/kobe-pablo.github.io/'
   },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
