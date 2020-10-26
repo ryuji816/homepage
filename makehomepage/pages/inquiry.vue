@@ -188,6 +188,12 @@
               <v-card-title>送信に成功しました</v-card-title>
             </v-card>
           </v-dialog>
+          <v-snackbar
+            v-model="snackbar"
+            timeout="5000"
+          >
+            送信に失敗しました。再度送信してください。
+          </v-snackbar>
         </v-form>
       </v-container>
     </section>
@@ -200,6 +206,7 @@ export default {
   layout: 'ilayout',
   data () {
     return {
+      snackbar: false,
       success: false,
       check: false,
       fail: false,
@@ -251,18 +258,16 @@ export default {
         channel: '#お問い合わせ',
         text: senddata
       })
-      try {
-        // eslint-disable-next-line no-unused-vars
-        const res = await this.$axios.$post('https://slack.com/api/chat.postMessage', params, config).then(
-          () => {
-            this.check = false
-            this.success = true
-          }
-        )
-      } catch (e) {
-        // eslint-disable-next-line no-console
-        console.log(e)
-      }
+      await this.$axios.$post('https://slack.com/api/chat.postMessage', params, config).then(
+        () => {
+          this.check = false
+          this.success = true
+        }
+      ).catch(
+        () => {
+          this.snackbar = true
+        }
+      )
     }
   }
 }
