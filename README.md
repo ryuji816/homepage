@@ -44,3 +44,15 @@ KEY = VALUE
 ### 現在の設定内容
 
 - API_KEY : slack apiより作成したAppであるClient DataのBot User OAuth Access Token
+
+
+## デプロイ手順
+
+```shell
+cd makehomepage
+npm install
+npm run generate
+# https://github.com/kobe-pablo/kobe-pablo.github.io
+# のリポジトリの.gitと.gitignore以外を削除してmakehomepage/dist内のファイルを全てkobe-pablo.github.ioにコピペ
+# そしてkobe-pablo.github.ioをpushする
+```
