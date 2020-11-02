@@ -14,7 +14,7 @@
             xs="12"
           >
             <v-card>
-              <v-img src="/IMG_20201020_193746.jpg" />
+              <v-img src="/IMG_20201020_193719.jpg" />
             </v-card>
           </v-col>
           <v-col
@@ -80,7 +80,7 @@
             xs="12"
           >
             <v-card>
-              <v-img src="/IMG_20201020_193746.jpg" />
+              <v-img src="/IMG_20201017_192552.jpg" />
             </v-card>
           </v-col>
           <v-col
@@ -146,7 +146,7 @@
             xs="12"
           >
             <v-card>
-              <v-img src="/IMG_20201020_193746.jpg" />
+              <v-img src="/IMG_20201017_190417.jpg" />
             </v-card>
           </v-col>
           <v-col
