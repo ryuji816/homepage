@@ -45,7 +45,7 @@
             right
             background-color="transparent"
           >
-            <v-tabs-slider />
+            <v-tabs-slider color="transparent" />
             <v-tab v-for="(item,index) in menu" :key="index" :href="item.url">
               <p class="tabs__item">
                 {{ item.name }}
@@ -75,15 +75,17 @@
         background-color="#FBC02D"
         class="footer__tabs"
       >
-        <v-tabs-slider />
+        <v-tabs-slider color="transparent" />
         <v-tab v-for="(item,index) in menu" :key="index" :href="item.url" class="tabs__item">
-          {{ item.name }}
+          <p class="tabs__item">
+            {{ item.name }}
+          </p>
         </v-tab>
-        <p class="footer__copy">
+        <p class="footer__copy mr-4">
           &copy; 2020 pablo
         </p>
       </v-tabs>
-      <p class="footer__copy2">
+      <p class="footer__copy2 mr-4">
         &copy; 2020 pablo
       </p>
     </footer>
@@ -124,11 +126,6 @@ export default {
       menu: menuitem,
       drawer: false
     }
-  },
-  methods: {
-    back_home () {
-      this.$router.push('/')
-    }
   }
 }
 
@@ -137,12 +134,12 @@ export default {
 .icon__anchor {
   text-decoration:none;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 420px){
   .icon__anchor {
     display: none;
   }
 }
-@media screen and (min-width: 400px){
+@media screen and (min-width: 420px){
   .navicon {
     display: none;
   }
@@ -152,14 +149,14 @@ export default {
   font-size: 50px;
   color: #FBC02D;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 420px){
   .icon {
   width: 130px;
   height: 60px;
   margin: 0px 0px 0px 180px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .tabs {
     display: none;
   }
@@ -210,7 +207,7 @@ export default {
 .v-toolbar__title{
   font-size: 60px;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 420px){
   .footer__tabs{
     display: none;
   }
@@ -222,7 +219,7 @@ export default {
 .footer__copy2 {
   color: #FBC02D;
 }
-@media screen and (min-width: 400px){
+@media screen and (min-width: 420px){
   .footer__copy2{
     display: none;
   }
